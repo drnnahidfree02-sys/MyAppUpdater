@@ -1,0 +1,11 @@
+{
+  "admin": [
+    {
+      "username": "a",
+      "password": "a", 
+      "subscription": "aimkillapk",
+      "expiry": "2025-12-31",
+      "device_id": ""
+    }
+  ]
+}
